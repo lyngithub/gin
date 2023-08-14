@@ -1,0 +1,37 @@
+appName: xx
+port: 8080
+
+
+log:
+  logPath: ./runtime/logs
+  logFormat: "2006-01-02"
+  logFileExt: log
+  logMaxSize: 100
+  LogMaxBackups: 100
+  LogMaxAge: 100
+  LogCompress: false
+
+
+
+mysql:
+  dbType: mysql
+  dbName: test
+  host: '127.0.0.1'
+  port: '3306'
+  username: 'root'
+  password: '6542759'
+
+secretKey: "your_secret_key"
+im:
+  tokenUrl: "https://a1.easemob.com/1150230316212388/poyoo/token"
+  grantType: "client_credentials"
+  clientId: "YXA6CEWiMqBaR8-V2ZBHz-nEbw"
+  clientSecret: "YXA6rwZBgw979h-1KCStbfRTZYK7DRw"
+
+
+redis:
+  addr: 110.40.153.208
+  port: 6635
+  password:  # 密码(可为空)
+  db: 0 # 默认DB
+  dialTimeout: 5 #redis连接超时时间.默认5s

@@ -1,0 +1,41 @@
+package main
+
+import (
+	"fmt"
+	"os"
+	"testing"
+	"xx/app/domain/notify"
+	"xx/forms"
+	"xx/global"
+	"xx/initialize"
+)
+
+func TestMain(m *testing.M) {
+	initialize.InitBase()
+	os.Exit(m.Run())
+}
+
+func BenchmarkSubstr(b *testing.B) {
+
+	status := &forms.UserStatus{
+		Timestamp: 1600060847294,
+		User:      "t_13434@101961.com/android_b069b3333333333333333333333333333333335555555555555555555555555533333333852-79a3-555553c9e-9d08-ee5176b95df5",
+		Status:    "online",
+		CallId:    "easemob-demo#test_077777777777770a64f-cf01-434555555555555555555555555555555555555555555555555555555555555555555555c41-8786-df3b48b20e7e",
+		Security:  "2ca02c394bef9e5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555557abc85555555555555553958bcc3156d3",
+		Ip:        "211.157.146.444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444418:48098",
+		Version:   "gfddddddddddddddddfdt34444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444bhgfjhgjhgjhgj",
+	}
+
+	go func() {
+		fmt.Println(<-global.Exception)
+	}()
+	b.Log(45555)
+	// 调用 SetChan 函数
+	for i := 0; i < 10000000; i++ {
+		err := notify.SetChan(status)
+		if err != nil {
+			b.Errorf("SetChan returned an error: %v", err)
+		}
+	}
+}
