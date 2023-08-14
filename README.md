@@ -15,8 +15,11 @@ jwt验证
 
 viper 解析配置文件
 
-fastHttp 
+fastHttp 封装
 
+跨域
+
+登录验证
 
 
 
