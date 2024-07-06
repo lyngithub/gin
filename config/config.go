@@ -8,6 +8,7 @@ type ServerConfig struct {
 	RedisInfo RedisConfig `mapstructure:"redis" json:"redis"`
 	IMInfo    ImConfig    `mapstructure:"im" json:"im"`
 	JWTInfo   JWTConfig   `mapstructure:"jwt" json:"jwt"`
+	EsInfo    EsConfig    `mapstructure:"es" json:"es"`
 }
 
 type LogConfig struct {
@@ -46,4 +47,11 @@ type RedisConfig struct {
 	Password    string `mapstructure:"password" json:"password"`
 	Db          int    `mapstructure:"db" json:"db"`
 	DialTimeout int    `mapstructure:"dialTimeout" json:"dialTimeout"`
+}
+
+type EsConfig struct {
+	Addr     string `mapstructure:"addr" json:"addr"`
+	Port     int    `mapstructure:"port" json:"port"`
+	User     string `mapstructure:"user" json:"user"`
+	Password string `mapstructure:"password" json:"password"`
 }

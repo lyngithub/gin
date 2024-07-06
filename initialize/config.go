@@ -6,8 +6,9 @@ import (
 	"xx/global"
 )
 
-func InitConfig() {
+func init() {
 
+	fmt.Println("initConfig")
 	v := viper.New()
 	v.SetConfigFile("config.yaml")
 	if err := v.ReadInConfig(); err != nil {

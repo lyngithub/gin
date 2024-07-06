@@ -19,7 +19,8 @@ type dbConfig struct {
 	tablePrefix string //表头
 }
 
-func InitMysql() {
+func init() {
+	fmt.Println("initMysql")
 	var err error
 	cfg := &dbConfig{
 		dbType:   global.ServerConfig.MysqlInfo.DbType,

@@ -27,7 +27,8 @@ var (
 	hook io.Writer
 )
 
-func InitLogger() {
+func init() {
+	fmt.Println("initLogger")
 	logFilePath = global.ServerConfig.LogInfo.LogPath
 	logNamePrefix = global.ServerConfig.AppName
 	logNameFormat = global.ServerConfig.LogInfo.LogFormat

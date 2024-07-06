@@ -7,8 +7,8 @@ import (
 	"xx/global"
 )
 
-func InitRedis() {
-
+func init() {
+	fmt.Println("initRedis")
 	global.RedisClient = redis.NewClient(&redis.Options{
 		Addr:     fmt.Sprintf("%s:%d", global.ServerConfig.RedisInfo.Addr, global.ServerConfig.RedisInfo.Port),
 		Password: global.ServerConfig.RedisInfo.Password, // no password set

@@ -7,6 +7,7 @@ import (
 	"gorm.io/gorm"
 	"xx/config"
 	"xx/forms"
+	"xx/utils/es"
 )
 
 var MysqlConn *gorm.DB
@@ -16,3 +17,4 @@ var Trans ut.Translator
 var SugarLogger *zap.SugaredLogger
 var StatusUpdates = make(chan *forms.UserStatus, 2000)
 var Exception = make(chan *forms.Exception, 1000)
+var EsClient = es.Client{}

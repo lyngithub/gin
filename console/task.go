@@ -5,16 +5,13 @@ import (
 	"github.com/robfig/cron"
 )
 
-func InitConsole() {
+func StartCronJob() *cron.Cron {
 	var c = cron.New()
 
-	err := c.AddFunc("*/1 * * * *", func() {
-		//domain.GetOnline()
+	c.AddFunc("*/1 * * * *", func() {
 		fmt.Println("This task runs every minute.")
 	})
-	if err != nil {
-		return
-	}
 
 	c.Start()
+	return c
 }

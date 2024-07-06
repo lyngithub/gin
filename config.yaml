@@ -11,12 +11,10 @@ log:
   LogMaxAge: 100
   LogCompress: false
 
-
-
 mysql:
   dbType: mysql
   dbName: test
-  host: '127.0.0.1'
+  host: '110.40.153.208'
   port: '3306'
   username: 'root'
   password: '6542759'
@@ -31,7 +29,13 @@ im:
 
 redis:
   addr: 110.40.153.208
-  port: 6635
+  port: 6379
   password:  # 密码(可为空)
   db: 0 # 默认DB
   dialTimeout: 5 #redis连接超时时间.默认5s
+
+es:
+  addr: http://192.168.50.31
+  port: 9200
+  user:
+  password:

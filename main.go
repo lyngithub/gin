@@ -7,13 +7,12 @@ import (
 )
 
 func main() {
+	router := initialize.Routers()
 
-	initialize.InitBase()
-	Router := initialize.Routers()
-
-	if err := Router.Run(fmt.Sprintf(":%d", global.ServerConfig.Port)); err != nil {
+	if err := router.Run(fmt.Sprintf(":%d", global.ServerConfig.Port)); err != nil {
 		panic("启动失败")
 	} else {
 		fmt.Println("成功")
 	}
+
 }

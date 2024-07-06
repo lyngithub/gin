@@ -15,6 +15,7 @@ func Routers() *gin.Engine {
 	router.InitNotifyRouter(ApiGroup)
 	router.InitTokenRouter(ApiGroup)
 	router.InitUserRouter(ApiGroup)
+	router.InitEsRouter(ApiGroup)
 
 	return Router
 }
